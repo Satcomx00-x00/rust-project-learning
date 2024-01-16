@@ -2,6 +2,8 @@
 
 use rand_core::{RngCore, SeedableRng};
 use rand_xorshift::XorShiftRng;
+use rand::rngs::ThreadRng;
+
 
 #[derive(Debug)]
 struct Rot13 {
@@ -10,7 +12,9 @@ struct Rot13 {
 
 impl Rot13 {
     fn new() -> Self {
-        let mut rng = XorShiftRng::from_entropy();
+        let mut rng = rand::rngs::ThreadRng::default();
+        let seed: [u8; 16] = rng.gen();
+        let mut rng = rand_xorshift::XorShiftRng::from_seed(seed);
         Self { rng }
     }
 }
