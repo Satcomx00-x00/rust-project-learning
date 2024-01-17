@@ -4,9 +4,11 @@
 // hint.
 
 // I AM NOT DONE
-
+// TODO
 fn main() {
     let number = "T-H-R-E-E"; // don't change this line
+    // change the number type to str
+    
     println!("Spell a Number : {}", number);
     number = 3; // don't rename this variable
     println!("Number plus two is : {}", number + 2);
