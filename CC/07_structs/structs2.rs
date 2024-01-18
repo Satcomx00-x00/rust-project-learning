@@ -54,7 +54,7 @@ mod tests {
 }
 
 fn main() {
-    // Add your code here^
+
     println!("The order is: {:?}", create_order_template());
-    
+
 }

@@ -87,3 +87,9 @@ mod tests {
         assert_eq!(package.get_fees(cents_per_gram * 2), 9000);
     }
 }
+
+fn main() {
+
+    println!("The order is: {:?}", Package::new(String::from("Spain"), String::from("Spain"), 1500));
+
+}

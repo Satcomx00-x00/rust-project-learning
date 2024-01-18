@@ -28,6 +28,11 @@ fn fruit_basket() -> HashMap<String, u32> {
     basket
 }
 
+fn main() {
+    // Call the fruit_basket function and print the result
+    println!("{:?}", fruit_basket());
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

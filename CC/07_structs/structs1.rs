@@ -53,3 +53,10 @@ mod tests {
     }
 }
 
+fn main() {
+    // call your functions here!
+    classic_c_structs();
+
+
+
+}
