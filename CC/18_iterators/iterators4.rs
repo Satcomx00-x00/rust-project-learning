@@ -15,7 +15,8 @@ pub fn factorial(num: u64) -> u64 {
     // For an extra challenge, don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
-    (1..=num).fold(1, |acc, x| acc * x)
+    (1..=num).fold(1, |acc, x| acc * x)  
+    // fold prend deux arguments, une valeur initiale et une fermeture avec deux arguments
 
 }
 
@@ -41,4 +42,9 @@ mod tests {
     fn factorial_of_4() {
         assert_eq!(24, factorial(4));
     }
+}
+
+
+fn main() {
+    println!("{}", factorial(5));
 }

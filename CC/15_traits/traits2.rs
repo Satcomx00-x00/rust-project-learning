@@ -32,3 +32,9 @@ mod tests {
         assert_eq!(foo.pop().unwrap(), String::from("Foo"));
     }
 }
+
+
+fn main() {
+    let mut foo = vec![String::from("Foo")].append_bar();
+    println!("{:?}", foo);
+}

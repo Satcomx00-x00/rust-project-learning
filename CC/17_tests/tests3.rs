@@ -27,3 +27,7 @@ mod tests {
         assert!(!is_even(5));
     }
 }
+
+fn main() { 
+    println!("{}", is_even(5));
+}

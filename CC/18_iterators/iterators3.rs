@@ -88,3 +88,9 @@ mod tests {
         );
     }
 }
+
+
+fn main() {
+    let x = divide(81, 9);
+    println!("{:?}", x);
+}

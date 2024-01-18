@@ -47,3 +47,11 @@ mod tests {
         assert!(compare_license_types(other_software, some_software));
     }
 }
+
+
+fn main() {
+    let some_software = SomeSoftware {};
+    let other_software = OtherSoftware {};
+
+    println!("{}", compare_license_types(some_software, other_software));
+}

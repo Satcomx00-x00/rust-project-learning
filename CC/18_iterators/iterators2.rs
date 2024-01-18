@@ -65,3 +65,10 @@ mod tests {
         assert_eq!(capitalize_words_string(&words), "Hello World");
     }
 }
+
+
+fn main() {
+    let words = vec!["hello", "world"];
+    println!("{:?}", capitalize_words_vector(&words));
+    println!("{:?}", capitalize_words_string(&words));
+}

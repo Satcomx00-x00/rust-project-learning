@@ -39,4 +39,5 @@ fn some_func(item: impl SomeTrait + OtherTrait) -> bool {
 fn main() {
     some_func(SomeStruct {});
     some_func(OtherStruct {});
+    
 }

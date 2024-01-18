@@ -34,3 +34,11 @@ mod tests {
         assert_eq!(Wrapper::new("Foo").value, "Foo");
     }
 }
+
+fn main() {
+    let wrapped_number = Wrapper::new(42);
+    let wrapped_string = Wrapper::new("Rust is fun!");
+
+    println!("Wrapped number: {}", wrapped_number.value);
+    println!("Wrapped string: {}", wrapped_string.value);
+}

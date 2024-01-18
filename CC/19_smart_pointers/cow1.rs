@@ -47,3 +47,10 @@ mod tests {
         }
     }
 }
+
+
+fn main() {
+    let slice = vec![-1, 0, 1];
+    let mut input = Cow::from(slice);
+    //
+}

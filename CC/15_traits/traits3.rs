@@ -42,3 +42,12 @@ mod tests {
         assert_eq!(other_software.licensing_info(), licensing_info);
     }
 }
+
+fn main() {
+    let some_software = SomeSoftware { version_number: 1 };
+    let other_software = OtherSoftware {
+        version_number: "v2.0.0".to_string(),
+    };
+    println!("{}", some_software.licensing_info());
+    println!("{}", other_software.licensing_info());
+}
