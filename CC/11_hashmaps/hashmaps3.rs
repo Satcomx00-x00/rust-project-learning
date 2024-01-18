@@ -39,6 +39,14 @@ fn build_scores_table(results: String) -> HashMap<String, Team> {
         // will be the number of goals conceded by team_2, and similarly
         // goals scored by team_2 will be the number of goals conceded by
         // team_1.
+
+        let team_1 = scores.entry(team_1_name).or_insert(Team {   // ici, on crée une entrée dans le hashmap si elle n'existe pas, sinon on récupère l'entrée existante, 
+        // et on la met dans team_1 avec la méthode or_insert() 
+        // et on défini les valeurs de la structure Team
+
+            goals_scored: 0,
+            goals_conceded: 0,
+        });
     }
     scores
 }

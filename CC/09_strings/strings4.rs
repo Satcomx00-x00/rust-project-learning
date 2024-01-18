@@ -17,14 +17,17 @@ fn string(arg: String) {
 }
 
 fn main() {
-    ???("blue");
-    ???("red".to_string());
-    ???(String::from("hi"));
-    ???("rust is fun!".to_owned());
-    ???("nice weather".into());
-    ???(format!("Interpolation {}", "Station"));
-    ???(&String::from("abc")[0..1]);
-    ???("  hello there ".trim());
-    ???("Happy Monday!".to_string().replace("Mon", "Tues"));
-    ???("mY sHiFt KeY iS sTiCkY".to_lowercase());
+    // string_slice est une fonction qui prend un argument de type &str et qui affiche cet argument.
+    // string est une fonction qui prend un argument de type String et qui affiche cet argument.
+    // ne pas confondre &str et String : String est un type de données qui peut être modifié, alors que &str est une référence à une chaîne de caractères qui ne peut pas l'+être.
+    string_slice("blue");
+    string("red".to_string());
+    string(String::from("hi"));
+    string("rust is fun!".to_owned());
+    string("nice weather".into());
+    string(format!("Interpolation {}", "Station"));
+    string(&String::from("abc")[0..1]);
+    string("  hello there ".trim());
+    string("Happy Monday!".to_string().replace("Mon", "Tues"));
+    string("mY sHiFt KeY iS sTiCkY".to_lowercase());
 }

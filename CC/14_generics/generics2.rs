@@ -8,12 +8,14 @@
 
 // I AM NOT DONE
 
-struct Wrapper {
-    value: u32,
+
+// en utilisant <T> on peut utiliser n'importe quel type dans le wrapper (i32, String, etc) et donc pas seulement u32
+struct Wrapper<T> {
+    value: T,
 }
 
-impl Wrapper {
-    pub fn new(value: u32) -> Self {
+impl<T> Wrapper<T> {
+    pub fn new(value: T) -> Self {
         Wrapper { value }
     }
 }
