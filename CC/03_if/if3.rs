@@ -30,6 +30,16 @@ pub fn animal_habitat(animal: &str) -> &'static str {
     habitat
 }
 
+fn main() {
+    // Add your code here
+    println!("The habitat is: {}", animal_habitat("crab"));
+    println!("The habitat is: {}", animal_habitat("gopher"));
+    println!("The habitat is: {}", animal_habitat("snake"));
+    println!("The habitat is: {}", animal_habitat("dinosaur"));
+
+    
+}
+
 // No test changes needed.
 #[cfg(test)]
 mod tests {
@@ -55,3 +65,4 @@ mod tests {
         assert_eq!(animal_habitat("dinosaur"), "Unknown")
     }
 }
+

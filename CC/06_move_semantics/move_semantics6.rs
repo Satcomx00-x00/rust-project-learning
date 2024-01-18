@@ -8,7 +8,7 @@
 // I AM NOT DONE
 
 fn main() {
-    let data = "Rust is great!".to_string();
+    let mut data = "Rust is great!".to_string();  // Declare data as mutable
 
     get_char(&data);   // data est emprunté
 

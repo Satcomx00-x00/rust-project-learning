@@ -11,9 +11,16 @@
 
 fn array_and_vec() -> ([i32; 4], Vec<i32>) {
     let a = [10, 20, 30, 40]; // a plain array
-    let v = vec![10, 20, 30, 40]; // définir le vecteur v à l'aide de la macro vec![]
+    let v = vec![10, 20, 30, 40]; // define the vector v using the vec![] macro
 
     (a, v)
+}
+
+fn main() {
+    // Add code here if needed
+    println!("The array is: {:?}", array_and_vec().0);
+    println!("The vector is: {:?}", array_and_vec().1);
+    
 }
 
 #[cfg(test)]

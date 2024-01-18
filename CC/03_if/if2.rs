@@ -10,9 +10,16 @@
 pub fn foo_if_fizz(fizzish: &str) -> &str {
     if fizzish == "fizz" {
         "foo"
-    } else {
+    } else if fizzish == "fuzz" {
         "bar"
+    } else {
+        "baz"
     }
+}
+
+fn main() {
+    // Add your code here
+    println!("The fizzish is: {}", foo_if_fizz("fizz"));
 }
 
 // No test changes needed!
