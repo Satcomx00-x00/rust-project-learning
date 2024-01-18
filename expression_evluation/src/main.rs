@@ -29,10 +29,8 @@ fn eval(expr: Value) -> Result<i32, String> {
 fn main() {
     let num1 = 5;
     let num2 = 6;
-
     let _add = Value::Add(Box::new(Value::Number(num1)), Box::new(Value::Number(num2)));
     let _sub = Value::Sub(Box::new(Value::Number(num1)), Box::new(Value::Number(num2)));
-
     println!("add: {:?}", eval(_add));
 
 

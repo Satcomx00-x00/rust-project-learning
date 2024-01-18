@@ -14,9 +14,7 @@ fn main() {
         [4, 5, 6],
         [7, 8, 9]
     ];
-
     transpose(&mut matrix);
-
     for row in matrix.iter() {
         println!("{:?}", row);
     }
