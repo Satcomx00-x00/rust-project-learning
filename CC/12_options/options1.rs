@@ -42,3 +42,9 @@ mod tests {
         assert_eq!(icecreams, 5);
     }
 }
+
+
+fn main() {
+    // call the function here to see what it does^
+    println!("{:?}", maybe_icecream(9));
+}
