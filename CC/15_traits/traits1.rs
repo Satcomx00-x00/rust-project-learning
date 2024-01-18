@@ -16,7 +16,7 @@ trait AppendBar {
 impl AppendBar for String {
     fn append_bar(self) -> Self {
         let mut new_string = self;
-        new_string.push_str("Bar");
+        new_string.push_str("Bar");  // push_str() ajoute une chaîne de caractères à la fin de la chaîne
         new_string
     }
 }

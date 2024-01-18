@@ -7,9 +7,10 @@
 
 // I AM NOT DONE
 
-struct Book {
-    author: &str,
-    title: &str,
+struct Book<'a> {
+    // Pour résoudre le problème, j'ajoute une annotation de durée de vie à la définition de la structure et je spécifie la durée de vie des champs auteur et titre.
+    author: &'a str,
+    title: &'a str,
 }
 
 fn main() {

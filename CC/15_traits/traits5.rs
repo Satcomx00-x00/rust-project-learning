@@ -30,7 +30,9 @@ impl SomeTrait for OtherStruct {}
 impl OtherTrait for OtherStruct {}
 
 // YOU MAY ONLY CHANGE THE NEXT LINE
-fn some_func(item: ??) -> bool {
+// Supposons que nous voulions que la notification utilise le formatage d'affichage 
+// ainsi que le résumé sur l'élément : nous spécifions dans la définition de la notification que l'élément doit implémenter à la fois l'affichage et le résumé.
+fn some_func(item: impl SomeTrait + OtherTrait) -> bool {
     item.some_function() && item.other_function()
 }
 

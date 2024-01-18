@@ -51,11 +51,16 @@ fn count_collection_for(collection: &[HashMap<String, Progress>], value: Progres
 }
 
 fn count_collection_iterator(collection: &[HashMap<String, Progress>], value: Progress) -> usize {
-    // collection is a slice of hashmaps.
-    // collection = [{ "variables1": Complete, "from_str": None, ... },
-    //     { "variables2": Complete, ... }, ... ]
-    todo!();
+    // Pour résoudre le problème, je modifie la fonction count_collection_iterator pour convertir la variable collection en un itérateur à l'aide de la méthode iter
+    // puis j'utilise la méthode filter pour filtrer les valeurs qui correspondent à la valeur donnée
+    // j'utilise la méthode count pour compter le nombre de valeurs correspondantes
+    collection
+        .iter()
+        .flat_map(|map| map.values())
+        .filter(|&val| *val == value)
+        .count()
 }
+
 
 #[cfg(test)]
 mod tests {
