@@ -30,13 +30,14 @@ impl Package {
             }
         }
     }
-
-    fn is_international(&self) -> ??? {
-        // Something goes here...
+    // La structure Package est définie avec trois champs : sender_country et recipient_country qui sont tous deux de type String, et weight_in_grams qui est de type u32 (un entier 32 bits non signé). 
+    // La nouvelle méthode est un constructeur qui prend trois paramètres : sender_country, recipient_country et weight_in_grams.
+    fn is_international(&self) -> bool {
+        self.sender_country != self.recipient_country
     }
 
-    fn get_fees(&self, cents_per_gram: u32) -> ??? {
-        // Something goes here...
+    fn get_fees(&self, cents_per_gram: u32) -> u32 {
+        self.weight_in_grams * cents_per_gram
     }
 }
 

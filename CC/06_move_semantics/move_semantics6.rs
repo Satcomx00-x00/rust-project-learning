@@ -10,19 +10,19 @@
 fn main() {
     let data = "Rust is great!".to_string();
 
-    get_char(data);
+    get_char(&data);   // data est emprunté
 
-    string_uppercase(&data);
+    string_uppercase(&mut data);  // mutable et emprunté
 }
 
 // Should not take ownership
-fn get_char(data: String) -> char {
+fn get_char(data: &String) -> char {     // String est emprunté
     data.chars().last().unwrap()
 }
 
 // Should take ownership
-fn string_uppercase(mut data: &String) {
-    data = &data.to_uppercase();
+fn string_uppercase(data: &mut String) {    
+    *data = data.to_uppercase();   // *data pointe vers la valeur de data (String)
 
     println!("{}", data);
 }

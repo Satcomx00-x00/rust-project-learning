@@ -11,7 +11,7 @@
 
 fn array_and_vec() -> ([i32; 4], Vec<i32>) {
     let a = [10, 20, 30, 40]; // a plain array
-    let v = // TODO: declare your vector here with the macro for vectors
+    let v = vec![10, 20, 30, 40]; // définir le vecteur v à l'aide de la macro vec![]
 
     (a, v)
 }
