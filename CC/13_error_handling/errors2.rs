@@ -48,3 +48,13 @@ mod tests {
         );
     }
 }
+fn main() {
+    let quantities = ["10", "20", "oops"];
+
+    for qty in quantities.iter() {
+        match total_cost(qty) {
+            Ok(cost) => println!("Total cost for {} items: {}", qty, cost),
+            Err(e) => println!("Error calculating total cost for {}: {}", qty, e),
+        }
+    }
+}

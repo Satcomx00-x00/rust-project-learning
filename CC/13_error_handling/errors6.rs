@@ -26,6 +26,10 @@ impl ParsePosNonzeroError {
     }
     // TODO: add another error conversion function here.
     // fn from_parseint...
+    fn from_parseint(err: ParseIntError) -> ParsePosNonzeroError {
+        ParsePosNonzeroError::ParseInt(err)
+    }
+
 }
 
 fn parse_pos_nonzero(s: &str) -> Result<PositiveNonzeroInteger, ParsePosNonzeroError> {
@@ -90,5 +94,15 @@ mod test {
         let x = PositiveNonzeroInteger::new(42);
         assert!(x.is_ok());
         assert_eq!(parse_pos_nonzero("42"), Ok(x.unwrap()));
+    }
+}
+
+fn main() {
+    let numbers = ["0", "42", "-555", "not a number"];
+    for &number_str in numbers.iter() {
+        match parse_pos_nonzero(number_str) {
+            Ok(x) => println!("{} is a valid positive non-zero integer string: {}", number_str, x.0),
+            Err(e) => println!("{} is invalid: {:?}", number_str, e),
+        }
     }
 }

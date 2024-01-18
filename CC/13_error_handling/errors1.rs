@@ -41,3 +41,14 @@ mod tests {
         );
     }
 }
+
+fn main() {
+    let names = ["Beyoncé", ""];
+
+    for name in names.iter() {
+        match generate_nametag_text(name.to_string()) {
+            Ok(greeting) => println!("{}", greeting),
+            Err(err) => println!("Error: {}", err),
+        }
+    }
+}

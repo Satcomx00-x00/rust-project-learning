@@ -34,3 +34,8 @@ fn test_creation() {
     );
     assert_eq!(Err(CreationError::Zero), PositiveNonzeroInteger::new(0));
 }
+
+fn main() {
+    let x = PositiveNonzeroInteger::new(10);
+    println!("{:?}", x);
+}
